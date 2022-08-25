@@ -54,8 +54,13 @@ render() {
         </p>
       </div>
       {
-        arrMusics.map(({ trackName, previewUrl }) => (
-          <MusicCard key={ trackName } trackName={ trackName } previwUrl={ previewUrl } />
+        arrMusics.map(({ trackName, previewUrl, trackId }) => (
+          <MusicCard
+            key={ trackName }
+            trackName={ trackName }
+            previwUrl={ previewUrl }
+            trackId={ trackId }
+          />
         ))
       }
     </div>

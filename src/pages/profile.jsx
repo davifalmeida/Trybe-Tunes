@@ -7,60 +7,51 @@ import { getUser } from '../services/userAPI';
 class Profile extends React.Component {
   state = {
     loading: false,
-    userName: '',
-    email: '',
-    description: '',
-    image: '',
+    profile: {},
   }
 
-  componentDidMount = () => {
-    this.getUser();
-  }
-
-  getUser = async () => {
-    this.setState({ loading: true });
-    const response = await getUser();
+  async componentDidMount() {
     this.setState({
-      userName: response.userName,
-      email: response.email,
-      description: response.description,
-      image: response.image,
-      loading: false,
+      loading: true,
+    }, async () => {
+      const result = await getUser();
+      this.setState({
+        loading: false,
+        profile: result,
+      });
     });
   }
 
   render() {
     const {
-      userName,
-      email,
-      description,
-      image,
       loading,
-    } = this.state;
+      profile: {
+        name,
+        image,
+        email,
+        description,
+      } } = this.state;
     return (
       <div data-testid="page-profile">
         <Header />
-        { loading === true ? <Loading /> : null }
         <h1>Profile</h1>
-        <image data-testid="edit-input-image" src={ image } alt={ userName } />
-        <Link to="/profile/edit">
-          <button type="button">Editar perfil</button>
-        </Link>
-        <p>
-          Nome:
-          {' '}
-          <span>{userName}</span>
-        </p>
-        <p>
-          Email:
-          {' '}
-          <span>{email}</span>
-        </p>
-        <p>
-          Description:
-          {' '}
-          <span>{description}</span>
-        </p>
+        { loading === true ? <Loading /> : null }
+        <div>
+          <img src={ image } alt={ name } data-testid="profile-image" />
+          <h2 data-testid="profile-name">
+            { name }
+          </h2>
+          <h2 data-testid="profile-email">
+            { email }
+          </h2>
+          <p data-testid="profile-description">
+            { description }
+          </p>
+
+          <Link to="/profile/edit">
+            Editar perfil
+          </Link>
+        </div>
       </div>
     );
   }

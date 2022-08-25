@@ -5,19 +5,24 @@ import MusicCard from '../Components/MusicCard';
 import { getFavoriteSongs } from '../services/favoriteSongsAPI';
 
 class Favorites extends React.Component {
+  constructor(props) {
+    super(props);
+    this.favoriteSongs = this.favoriteSongs.bind(this);
+  }
+
   state = {
     arrFavSongs: [],
     loading: false,
   };
 
-componentDidMount = async () => {
-  this.getFavoriteSongs();
+componentDidMount = () => {
+  this.favoriteSongs();
 }
 
-getFavoriteSongs = async () => {
+favoriteSongs = async () => {
   this.setState({ loading: true });
   const response = await getFavoriteSongs();
-  this.setState({ arrFavSongs: response, loading: false });
+  this.setState({ loading: false, arrFavSongs: response });
 };
 
 render() {
@@ -27,16 +32,22 @@ render() {
       <Header />
       <h1>Favorites</h1>
       { loading === true ? <Loading /> : null }
-      {
-        arrFavSongs.map(({ trackName, previewUrl, trackId }) => (
-          <MusicCard
-            key={ trackName }
-            trackName={ trackName }
-            previwUrl={ previewUrl }
-            trackId={ trackId }
-          />
-        ))
-      }
+
+      <div>
+
+        {
+          arrFavSongs.map((music) => (
+            <MusicCard
+              key={ music.trackName }
+              trackName={ music.trackName }
+              previewUrl={ music.previewUrl }
+              trackId={ music.trackId }
+              music={ music }
+              favoriteSongs={ this.favoriteSongs }
+            />
+          ))
+        }
+      </div>
 
     </div>
   );

@@ -7,6 +7,7 @@ class MusicCard extends Component {
   state = {
     isChecked: false,
     loading: false,
+    arrFavSongs: [],
   }
 
   componentDidMount = () => {
@@ -24,7 +25,9 @@ class MusicCard extends Component {
     const { musicObj } = this.props;
     this.setState((preview) => ({ loading: true, isChecked: !preview.isChecked }));
     await addSong(musicObj);
+    const newFavorite = await getFavoriteSongs() || [];
     this.setState({ loading: false });
+    this.setState((preview) => { preview.arrFavSongs = newFavorite; return preview; });
   }
 
   render() {

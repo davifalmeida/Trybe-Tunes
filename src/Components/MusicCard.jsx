@@ -23,14 +23,21 @@ class MusicCard extends Component {
 
 removeSong = async () => {
   const { trackId } = this.props;
-  await removeSong(trackId);
-  this.setState({ isChecked: false });
+  const response = await removeSong();
+  const isChecked = response.some(({ trackId: id }) => id === trackId);
+  this.setState({ isChecked: !isChecked });
 }
 
   handleChange = async () => {
     const { musicObj } = this.props;
-    this.setState((preview) => ({ loading: true, isChecked: !preview.isChecked }));
-    await addSong(musicObj);
+    const { isChecked } = this.state;
+    if (isChecked) {
+      await removeSong(musicObj);
+      this.setState({ isChecked: !isChecked });
+    } else {
+      this.setState((preview) => ({ loading: true, isChecked: !preview.isChecked }));
+      await addSong(musicObj);
+    }
     const newFavorite = await getFavoriteSongs() || [];
     this.setState({ loading: false });
     this.setState((preview) => { preview.arrFavSongs = newFavorite; return preview; });

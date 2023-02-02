@@ -1,19 +1,416 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
 
 .loading {
   align-items: center;
   display: flex;
   justify-content: center;
 }
+
+.login{
+
+  position: relative;
+  width: 1280px;
+  height: 720px;
+  background: linear-gradient(123.66deg, #003BE5 12.08%, #00D5E2 86.52%);
+}
+
+.boxBranco{  
+  position: absolute;
+  width: 750px;
+  height: 450px;
+  left: 265px;
+  top: 135px;
+  
+  background: #FFFFFF;
+  box-shadow: 0px 0px 26px rgba(68, 73, 85, 0.2);
+  border-radius: 20px;
+}
+
+.logo{
+
+  position: absolute;
+  width: 187.19px;
+  height: 104.89px;
+  left: 546.81px;
+  top: 245px;
+}
+.bgAzul{  
+  
+  position: absolute;
+  width: 1657px;
+  height: 1288px;
+  left: -386px;
+  top: -74px;
+}
+.tunes{
+
+  
+  position: absolute;
+  width: 113.71px;
+  height: 29.65px;
+  left: 598.96px;
+  top: 320.23px;
+  
+  background: #003BE5;
+}
+
+
+.trybe{
+
+  
+  position: absolute;
+  width: 112.84px;
+  height: 41.78px;
+  left: 546.81px;
+  top: 277.04px;
+  
+  background: #00D5E2;
+  
+}
+
+
+/* Group 5 */
+
+position: absolute;
+width: 186px;
+height: 224px;
+left: 69px;
+top: 29px;
+
+filter: blur(7.5px);
+
+
+/* Line 10 */
+
+position: absolute;
+width: 102px;
+height: 0px;
+left: 69px;
+top: 90px;
+
+border: 14px solid #00D5E2;
+transform: rotate(90deg);
+
+
+/* Line 13 */
+
+position: absolute;
+width: 102px;
+height: 0px;
+left: 255px;
+top: 90px;
+
+border: 14px solid #00D5E2;
+transform: rotate(90deg);
+
+
+/* Line 11 */
+
+position: absolute;
+width: 166px;
+height: 0px;
+left: 131px;
+top: 58px;
+
+border: 14px solid #00D5E2;
+transform: rotate(90deg);
+
+
+/* Line 12 */
+
+position: absolute;
+width: 224px;
+height: 0px;
+left: 193px;
+top: 29px;
+
+border: 14px solid #00D5E2;
+transform: rotate(90deg);
+
+
+/* Group 6 */
+
+position: absolute;
+width: 186px;
+height: 224px;
+left: 972px;
+top: 471px;
+
+filter: blur(7.5px);
+
+
+/* Line 10 */
+
+position: absolute;
+width: 102px;
+height: 0px;
+left: 972px;
+top: 532px;
+
+border: 9px solid #003BE5;
+transform: rotate(90deg);
+
+
+/* Line 13 */
+
+position: absolute;
+width: 102px;
+height: 0px;
+left: 1158px;
+top: 532px;
+
+border: 9px solid #003BE5;
+transform: rotate(90deg);
+
+
+/* Line 11 */
+
+position: absolute;
+width: 166px;
+height: 0px;
+left: 1034px;
+top: 500px;
+
+border: 9px solid #003BE5;
+transform: rotate(90deg);
+
+
+/* Line 12 */
+
+position: absolute;
+width: 224px;
+height: 0px;
+left: 1096px;
+top: 471px;
+
+border: 9px solid #003BE5;
+transform: rotate(90deg);
+
+
+/* Ellipse 4 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 812px;
+height: 812px;
+left: -386px;
+top: 402px;
+
+border: 3px solid #00D5E2;
+
+
+/* Ellipse 4 */
+
+position: absolute;
+width: 431px;
+height: 431px;
+left: 840px;
+top: -74px;
+
+background: #003BE5;
+filter: blur(35.5px);
+
+
+
+/* botão */
+
+position: absolute;
+width: 400px;
+height: 40px;
+left: 440px;
+top: 464px;
+
+
+
+/* Rectangle 3 */
+
+position: absolute;
+width: 400px;
+height: 40px;
+left: 440px;
+top: 464px;
+
+background: #003BE5;
+border-radius: 100px;
+
+
+/* entrar */
+
+position: absolute;
+width: 56px;
+height: 14px;
+left: 612px;
+top: 479px;
+
+font-family: 'Epilogue';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 14px;
+text-align: center;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+
+color: #FFFFFF;
+
+
+
+/* nome */
+
+position: absolute;
+width: 400px;
+height: 40px;
+left: 440px;
+top: 415px;
+
+
+
+/* Rectangle 2 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 400px;
+height: 40px;
+left: 440px;
+top: 415px;
+
+border: 1px solid #003BE5;
+border-radius: 100px;
+
+
+/* qual é o seu nome? */
+
+position: absolute;
+width: 134px;
+height: 14px;
+left: 572px;
+top: 429px;
+
+font-family: 'Epilogue';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 14px;
+text-align: center;
+
+color: #003BE5;
+
+
+
+
+
+
+/* Group 3 */
+
+position: absolute;
+width: 64.1px;
+height: 67.29px;
+left: 669.9px;
+top: 245px;
+
+
+
+/* Group 2 */
+
+position: absolute;
+width: 50.86px;
+height: 34.69px;
+left: 676.54px;
+top: 277.6px;
+
+
+
+/* Group 1 */
+
+position: absolute;
+width: 50.86px;
+height: 34.69px;
+left: 676.54px;
+top: 277.6px;
+
+
+
+/* Line 1 (Stroke) */
+
+position: absolute;
+width: 10.45px;
+height: 5.23px;
+left: 690.91px;
+top: 290.1px;
+
+background: #00D5E2;
+transform: rotate(90deg);
+
+
+/* Line 9 (Stroke) */
+
+position: absolute;
+width: 18.29px;
+height: 5.23px;
+left: 718.27px;
+top: 286.18px;
+
+background: #00D5E2;
+transform: rotate(90deg);
+
+
+/* Line 2 (Stroke) */
+
+position: absolute;
+width: 34.69px;
+height: 5.23px;
+left: 709.15px;
+top: 277.6px;
+
+background: #00D5E2;
+transform: rotate(90deg);
+
+
+/* Line 3 (Stroke) */
+
+position: absolute;
+width: 25.23px;
+height: 5.23px;
+left: 700.03px;
+top: 282.33px;
+
+background: #00D5E2;
+transform: rotate(90deg);
+
+
+/* Line 6 (Stroke) */
+
+position: absolute;
+width: 22.21px;
+height: 5.23px;
+left: 681.76px;
+top: 284.22px;
+
+background: #003BE5;
+transform: rotate(90deg);
+
+
+/* Line 7 (Stroke) */
+
+position: absolute;
+width: 22.21px;
+height: 5.23px;
+left: 727.39px;
+top: 284.22px;
+
+background: #003BE5;
+transform: rotate(90deg);
+
+
+/* Ellipse 1 (Stroke) */
+
+position: absolute;
+width: 64.1px;
+height: 52.49px;
+left: 669.9px;
+top: 245px;
+
+background: #003BE5;
+
+

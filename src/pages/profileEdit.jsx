@@ -53,6 +53,7 @@ handleSubmit = async (e) => {
     description,
   });
 
+  // eslint-disable-next-line react/destructuring-assignment
   this.props.history.push('/profile');
 }
 

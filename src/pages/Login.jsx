@@ -40,24 +40,30 @@ state = {
      const { userMinLength, loading, login } = this.state;
 
      return (
-       <div data-testid="page-login">
+       <div
+         className="login"
+         data-testid="page-login"
+       >
          {loading === false ? (
-           <div>
-             <h1>Login</h1>
+           <div className="logo, boxBranco">
+             <img src="WhatsApp Image 2023-02-01 at 12.45.00.jpeg" alt="logo" />
+             <h1 className="trybe">Trybe</h1>
+             <h1 className="tunes"> Tunes</h1>
+
              <form>
                <input
                  type="text"
                  name="userName"
-                 placeholder="Username"
+                 placeholder="Digite seu nome"
                  onChange={ this.handleUserName }
                  data-testid="login-name-input"
                />
-               <input
+               {/* <input
                  type="password"
                  name="password"
                  placeholder="Password"
                  onChange={ this.handleUserName }
-               />
+               /> */}
                <button
                  type="submit"
                  disabled={ !userMinLength }
